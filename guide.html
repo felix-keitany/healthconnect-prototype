@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect - User Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7fa; color: #333; }
+        nav { background-color: #007bff; padding: 1rem; color: white; display: flex; justify-content: space-between; }
+        nav ul { list-style: none; display: flex; gap: 1rem; }
+        nav a { color: white; text-decoration: none; }
+        .sidebar { width: 250px; background: #e9ecef; padding: 1rem; height: 100vh; position: fixed; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar a { display: block; padding: 0.5rem; color: #333; text-decoration: none; }
+        .main { margin-left: 250px; padding: 2rem; }
+        .step { margin-bottom: 2rem; }
+        .step img { width: 100%; max-width: 600px; }
+        .faq { margin: 2rem 0; }
+        .faq-item { background: white; margin-bottom: 1rem; border-radius: 5px; overflow: hidden; }
+        .faq-header { padding: 1rem; background: #ffc107; cursor: pointer; }
+        .faq-content { padding: 1rem; display: none; }
+        .faq-content.active { display: block; }
+        footer { background: #343a40; color: white; text-align: center; padding: 1rem; margin-left: 250px; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqHeaders = document.querySelectorAll('.faq-header');
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    content.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">HealthConnect</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="prototype.html">Prototype</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+            <li><a href="guide.html">User Guide</a></li>
+        </ul>
+    </nav>
+    <aside class="sidebar">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+        </ul>
+    </aside>
+    <main class="main">
+        <section id="installation" class="step">
+            <h1>Installation & Setup</h1>
+            <ol>
+                <li>Download from App Store or Google Play.</li>
+                <li>Register with email or SSO.</li>
+                <li>Grant permissions for sensors, notifications, GPS.</li>
+                <li>Sync wearable device.</li>
+            </ol>
+            <img src="images/setup-screenshot.png" alt="Setup Screenshot">
+        </section>
+        <section id="features" class="step">
+            <h1>Core Features</h1>
+            <ul>
+                <li>Health Monitoring: Track steps, heart rate.</li>
+                <li>Preventive Alerts: AI-generated reminders.</li>
+                <li>Telehealth: Schedule appointments.</li>
+                <li>Medication Tracking: OTC logs.</li>
+                <li>Lifestyle Guidance: Personalized tips.</li>
+            </ul>
+            <img src="images/features-screenshot.png" alt="Features Screenshot">
+        </section>
+        <section id="troubleshooting" class="faq">
+            <h1>FAQs</h1>
+            <div class="faq-item">
+                <div class="faq-header">App not syncing?</div>
+                <div class="faq-content">Check internet and reconnect wearable.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">Forgot password?</div>
+                <div class="faq-content">Use reset on login screen.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">Telehealth issues?</div>
+                <div class="faq-content">Allow camera and microphone permissions.</div>
+            </div>
+            <p><a href="images/user-manual.pdf" download>Download Full Manual (PDF)</a></p>
+        </section>
+        <section>
+            <h2>Contact & Support</h2>
+            <p>Email: support@healthconnect.com</p>
+            <p>Phone: +87-700-479</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 HealthConnect | <a href="#" style="color: #ccc;">Privacy Policy</a> | <a href="#" style="color: #ccc;">Terms</a></p>
+    </footer>
+</body>
+</html>

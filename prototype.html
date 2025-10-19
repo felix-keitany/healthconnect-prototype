@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect - Prototype</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7fa; color: #333; }
+        nav { background-color: #007bff; padding: 1rem; color: white; display: flex; justify-content: space-between; }
+        nav ul { list-style: none; display: flex; gap: 1rem; }
+        nav a { color: white; text-decoration: none; }
+        .infographic { text-align: center; padding: 2rem; background: white; margin: 2rem; border-radius: 8px; }
+        .accordion { margin: 2rem; }
+        .accordion-item { background: #e9ecef; margin-bottom: 1rem; border-radius: 5px; }
+        .accordion-header { padding: 1rem; cursor: pointer; background: #007bff; color: white; }
+        .accordion-content { padding: 1rem; display: none; }
+        .accordion-content.active { display: block; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+        footer { background: #343a40; color: white; text-align: center; padding: 1rem; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    content.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">HealthConnect</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="prototype.html">Prototype</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+            <li><a href="guide.html">User Guide</a></li>
+        </ul>
+    </nav>
+    <section class="infographic">
+        <h1>System Architecture</h1>
+        <img src="images/architecture.png" alt="Architecture Infographic" width="400" height="500" >
+    </section>
+    <section class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">Hardware Specs</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>ARM processors for edge devices</li>
+                    <li>1TB SSD storage</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">IoT Integration</div>
+            <div class="accordion-content">
+                <p>BLE/Wi-Fi for wireless transmission.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Features</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Real-time monitoring</li>
+                    <li>Predictive analytics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section style="text-align: center; margin: 2rem;">
+        <img src="images/prototype.png" alt="Prototype Screenshot" width="300" height="300">
+        <p><a href="https://ai.invideo.io/workspace/db9a13a1-26fd-40f1-bb2e-1963d23d23de/v40-copilot/d71c2c51-738e-431d-962b-853db215656f" style="color: #007bff;">View Demo Video</a></p>
+    </section>
+    <table>
+        <tr><th>Processor</th><th>Model</th><th>Use Case</th></tr>
+        <tr><td>Intel</td><td>i7</td><td>Server Processing</td></tr>
+        <tr><td>AMD</td><td>Equivalent</td><td>Concurrent Data</td></tr>
+    </table>
+    <footer>
+        <p>&copy; 2025 HealthConnect | <a href="#" style="color: #ccc;">Privacy Policy</a> | <a href="#" style="color: #ccc;">Terms</a></p>
+    </footer>
+</body>
+</html>
